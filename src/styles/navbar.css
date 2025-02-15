@@ -1,0 +1,22 @@
+.navbar {
+    color: var(--dark-color);
+    padding: 26px 0;
+    background-color: var(--light-color) !important;
+}
+
+.navbar a {
+    margin-right: 50px;
+    padding: 0 !important;
+    color: inherit;
+}
+
+.download-btn {
+    background-color: #00a8e8;
+    border: none;
+    border-radius: 100px;
+    padding: 10px 30px;
+}
+
+.download-btn span {
+    margin-right: 20px;
+}
