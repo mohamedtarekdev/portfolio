@@ -1,0 +1,7 @@
+.hero {
+    background-color: var(--light-color);
+    background-image: url('../assets/images/language-bg.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
