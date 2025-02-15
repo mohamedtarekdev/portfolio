@@ -30,7 +30,7 @@ const TechStack = () => {
     const rows = getRows(data, rowPattern);
 
     return (
-        <div className="tech-stack">
+        <div id="tech-stack" className="tech-stack">
             <Container>
                 <Row>
                     <Col md={12}>
