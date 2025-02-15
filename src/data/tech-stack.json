@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "created_at": "2025-02-15T12:14:04.564028+00:00",
+        "tech_name": "JavaScript",
+        "tech_color": "f7e018",
+        "tech_icon": "src/assets/images/icons/js.svg",
+        "tech_order": 1
+    },
+    {
+        "id": 2,
+        "created_at": "2025-02-15T12:15:01.568366+00:00",
+        "tech_name": "Node.js",
+        "tech_color": "3c873a",
+        "tech_icon": "src/assets/images/icons/nodejs.svg",
+        "tech_order": 2
+    },
+    {
+        "id": 3,
+        "created_at": "2025-02-15T12:15:46.191236+00:00",
+        "tech_name": "React",
+        "tech_color": "58c4dc",
+        "tech_icon": "src/assets/images/icons/react.svg",
+        "tech_order": 3
+    },
+    {
+        "id": 4,
+        "created_at": "2025-02-15T12:16:26.914088+00:00",
+        "tech_name": "Bootstrap",
+        "tech_color": "563d7c",
+        "tech_icon": "src/assets/images/icons/bootstrap.svg",
+        "tech_order": 4
+    },
+    {
+        "id": 5,
+        "created_at": "2025-02-15T12:16:50.491422+00:00",
+        "tech_name": "Material UI",
+        "tech_color": "0073e6",
+        "tech_icon": "src/assets/images/icons/mui.svg",
+        "tech_order": 5
+    },
+    {
+        "id": 6,
+        "created_at": "2025-02-15T12:17:52.219086+00:00",
+        "tech_name": "Express.js",
+        "tech_color": "828282",
+        "tech_icon": "src/assets/images/icons/expressjs.svg",
+        "tech_order": 6
+    },
+    {
+        "id": 7,
+        "created_at": "2025-02-15T12:18:09.049041+00:00",
+        "tech_name": "MySQL",
+        "tech_color": "00758f",
+        "tech_icon": "src/assets/images/icons/mysql.svg",
+        "tech_order": 7
+    },
+    {
+        "id": 8,
+        "created_at": "2025-02-15T12:19:06.839782+00:00",
+        "tech_name": "MongoDB",
+        "tech_color": "4faa41",
+        "tech_icon": "src/assets/images/icons/mongodb.svg",
+        "tech_order": 8
+    },
+    {
+        "id": 9,
+        "created_at": "2025-02-15T12:19:25.080252+00:00",
+        "tech_name": "GIT",
+        "tech_color": "f4511e",
+        "tech_icon": "src/assets/images/icons/git.svg",
+        "tech_order": 9
+    }
+]
