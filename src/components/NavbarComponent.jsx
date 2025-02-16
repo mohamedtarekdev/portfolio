@@ -18,7 +18,7 @@ function NavbarComponent() {
                             <Nav.Link href="#tech-stack">Teck Stack</Nav.Link>
                             <Nav.Link href="#">Works</Nav.Link>
                             <Nav.Link href="#">Projects</Nav.Link>
-                            <Nav.Link href="#">Contacts</Nav.Link>
+                            <Nav.Link href="#contacts">Contacts</Nav.Link>
                         </Nav>
                         <Button variant="primary" className="download-btn">
                             <span>Download CV</span>
