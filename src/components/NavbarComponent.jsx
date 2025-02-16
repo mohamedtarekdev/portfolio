@@ -4,6 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
 import DownloadIcon from '../assets/images/icons/download.svg';
+import Pdf from '../assets/pdfs/cv.pdf';
 
 import '../styles/navbar.css';
 
@@ -14,16 +15,20 @@ function NavbarComponent() {
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <div className="d-flex justify-content-between align-items-center w-100">
-                        <Nav navbarScroll>
+                        <Nav navbarScroll className="links">
                             <Nav.Link href="#tech-stack">Teck Stack</Nav.Link>
                             <Nav.Link href="#">Works</Nav.Link>
                             <Nav.Link href="#">Projects</Nav.Link>
                             <Nav.Link href="#contacts">Contacts</Nav.Link>
                         </Nav>
-                        <Button variant="primary" className="download-btn">
+                        <a
+                            className="download-btn btn btn-primary"
+                            href={Pdf}
+                            download="Mohamed Tarek CV.pdf"
+                        >
                             <span>Download CV</span>
                             <img src={DownloadIcon} alt="Download CV" />
-                        </Button>
+                        </a>
                     </div>
                 </Navbar.Collapse>
             </Container>

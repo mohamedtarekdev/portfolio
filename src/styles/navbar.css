@@ -4,7 +4,7 @@
     background-color: var(--light-color) !important;
 }
 
-.navbar a {
+.navbar .links a {
     margin-right: 50px;
     padding: 0 !important;
     color: inherit;
@@ -14,7 +14,7 @@
     background-color: #00a8e8;
     border: none;
     border-radius: 100px;
-    padding: 10px 30px;
+    padding: 10px 30px !important;
 }
 
 .download-btn span {
