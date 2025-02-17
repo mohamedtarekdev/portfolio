@@ -31,6 +31,10 @@
     background-color: var(--primary-color);
     border-radius: 60px;
     margin-right: 20px;
+    transition: 0.3s;
+}
+.contacts-icons .icon:hover {
+    transform: scale(1.1);
 }
 .contacts-icons .icon:last-child {
     margin-right: 0;
