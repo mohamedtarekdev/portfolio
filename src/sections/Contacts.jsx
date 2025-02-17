@@ -24,16 +24,25 @@ const Contacts = () => {
                     >
                         {fields.map((field, index) => (
                             <Row key={field}>
-                                <span className={field}>
-                                    {data[index].value}
-                                </span>
+                                {field === 'email' ? (
+                                    <a
+                                        href={`mailto:${data[index + 1].value}`}
+                                        className={field}
+                                    >
+                                        {data[index + 1].value}
+                                    </a>
+                                ) : (
+                                    <span className={field}>
+                                        {data[index + 1].value}
+                                    </span>
+                                )}
                             </Row>
                         ))}
                     </Col>
                 </Row>
                 <Row className="contacts-icons d-flex justify-content-center">
                     <Col md={12} className="d-flex justify-content-center">
-                        {data.slice(3).map((item) => (
+                        {data.slice(4).map((item) => (
                             <a
                                 key={item.id}
                                 href={item.link}

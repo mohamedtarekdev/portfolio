@@ -4,9 +4,10 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
 import DownloadIcon from '../assets/images/icons/download.svg';
-import Pdf from '../assets/pdfs/cv.pdf';
 
 import '../styles/navbar.css';
+
+import data from '../data/contacts.json';
 
 function NavbarComponent() {
     return (
@@ -23,8 +24,8 @@ function NavbarComponent() {
                         </Nav>
                         <a
                             className="download-btn btn btn-primary"
-                            href={Pdf}
-                            download="Mohamed Tarek CV.pdf"
+                            href={data[0].link}
+                            download={`${data[0].value}.pdf`}
                         >
                             <span>Download CV</span>
                             <img src={DownloadIcon} alt="Download CV" />

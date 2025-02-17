@@ -12,6 +12,9 @@
     margin: 8px 0;
     color: var(--dark-color);
 }
+.email:hover {
+    color: var(--primary-color);
+}
 .phone {
     font-size: 18px;
     font-weight: 500;
