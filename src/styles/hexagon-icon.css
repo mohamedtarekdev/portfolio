@@ -5,8 +5,7 @@
 
 .hexagon-icon-container:hover {
     filter: drop-shadow(4px 2px 0px rgba(255, 255, 255, 0.8));
-    transform: translateY(-2px); /* يعطي إحساس بالارتفاع */
-    cursor: pointer;
+    transform: translateY(-2px);
 }
 .hexagon-icon {
     display: flex;
