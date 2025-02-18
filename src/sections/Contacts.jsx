@@ -14,7 +14,7 @@ const Contacts = () => {
             <Container>
                 <Row>
                     <Col md={12}>
-                        <Title title="Contacts" color="#2C2F3F" />
+                        <Title title="Stay Connected" color="#2C2F3F" />
                     </Col>
                 </Row>
                 <Row className="contacts-info d-flex justify-content-center">

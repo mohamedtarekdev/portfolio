@@ -1,0 +1,52 @@
+.experience {
+    background-color: #fff;
+    padding: 50px 0;
+}
+
+.experience-info .company-info h4 {
+    margin-bottom: 10px;
+}
+
+.experience-info .company-info span {
+    font-size: 14px;
+    color: var(--dark-color);
+}
+
+.experience-info p {
+    margin-bottom: 40px !important;
+}
+
+.experience-info p:last-of-type {
+    margin-bottom: 0;
+}
+
+.experience-info .break-line-container {
+    width: 10%;
+}
+
+.experience-info .break-shape .break-point {
+    width: 30px;
+    height: 30px;
+    border: 1px dashed var(--primary-color);
+    border-radius: 50%;
+}
+
+.experience-info .break-shape .break-point span {
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
+
+.experience-info .break-shape .break-line {
+    width: 1px;
+    height: 80%;
+    /* background-color: var(--primary-color); */
+    border-left: 1px dashed var(--primary-color);
+}
+
+.position-info {
+    margin: 0;
+    padding: 0;
+}

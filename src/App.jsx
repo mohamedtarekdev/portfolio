@@ -5,6 +5,7 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 
 import Hero from './sections/Hero';
 import TechStack from './sections/TechStack';
+import Experience from './sections/Experience';
 import Contacts from './sections/Contacts';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <>
             <Hero />
             <TechStack />
+            <Experience />
             <Contacts />
         </>
     );
