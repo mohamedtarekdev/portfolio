@@ -18,7 +18,7 @@ function NavbarComponent() {
                     <div className="d-flex justify-content-between align-items-center w-100">
                         <Nav navbarScroll className="links">
                             <Nav.Link href="#tech-stack">Teck Stack</Nav.Link>
-                            <Nav.Link href="#">Works</Nav.Link>
+                            <Nav.Link href="#experience">Works</Nav.Link>
                             <Nav.Link href="#">Projects</Nav.Link>
                             <Nav.Link href="#contacts">Contacts</Nav.Link>
                         </Nav>

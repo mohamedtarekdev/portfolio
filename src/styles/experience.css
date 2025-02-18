@@ -14,6 +14,7 @@
 
 .experience-info p {
     margin-bottom: 40px !important;
+    color: var(--dark-color);
 }
 
 .experience-info p:last-of-type {

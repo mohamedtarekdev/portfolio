@@ -76,3 +76,7 @@ button:focus-visible {
         background-color: #f9f9f9;
     }
 }
+
+.simplebar-scrollbar::before {
+    background-color: var(--primary-color); /* اللون اللي عايزه */
+}
