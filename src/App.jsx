@@ -11,11 +11,14 @@ import TechStack from './sections/TechStack';
 import Experience from './sections/Experience';
 import Contacts from './sections/Contacts';
 import { supabase } from './config/supabaseClient';
+import Loading from './components/Loading';
 
 function App() {
     const [techs, setTechs] = useState([]);
     const [experiences, setExperiences] = useState([]);
     const [contacts, setContacts] = useState([]);
+
+    const [loading, setLoading] = useState(true);
 
     const fetchData = async () => {
         const [techs, experiences, contacts] = await Promise.all([
@@ -33,9 +36,13 @@ function App() {
                 .order('id', { ascending: true }),
         ]);
 
-        setTechs(techs.data);
-        setExperiences(experiences.data);
-        setContacts(contacts.data);
+        setTimeout(() => {
+            setTechs(techs.data);
+            setExperiences(experiences.data);
+            setContacts(contacts.data);
+            setLoading(false);
+            setLoading(false);
+        }, 1500);
     };
 
     useEffect(() => {
@@ -44,9 +51,7 @@ function App() {
 
     return (
         <SimpleBar style={{ height: '100vh', color: '#00a8e8' }}>
-            {techs.length > 0 &&
-            experiences.length > 0 &&
-            contacts.length > 0 ? (
+            {!loading ? (
                 <>
                     <Hero data={contacts} />
                     <TechStack data={techs} />
@@ -54,7 +59,7 @@ function App() {
                     <Contacts data={contacts} />
                 </>
             ) : (
-                <div>Loading...</div>
+                <Loading />
             )}
         </SimpleBar>
     );
