@@ -23,11 +23,11 @@ function App() {
     const fetchData = async () => {
         const [techs, experiences, contacts] = await Promise.all([
             supabase
-                .from('tech_stack')
+                .from('technologies')
                 .select('*')
                 .order('id', { ascending: true }),
             supabase
-                .from('experience_info')
+                .from('experiences')
                 .select('*')
                 .order('id', { ascending: true }),
             supabase
@@ -50,18 +50,20 @@ function App() {
     }, []);
 
     return (
-        <SimpleBar style={{ height: '100vh', color: '#00a8e8' }}>
-            {!loading ? (
-                <>
-                    <Hero data={contacts} />
-                    <TechStack data={techs} />
-                    <Experience data={experiences} />
-                    <Contacts data={contacts} />
-                </>
-            ) : (
-                <Loading />
-            )}
-        </SimpleBar>
+        <>
+            <SimpleBar style={{ height: '100vh', color: '#00a8e8' }}>
+                {!loading ? (
+                    <>
+                        <Hero data={contacts} />
+                        <TechStack data={techs} />
+                        <Experience data={experiences} />
+                        <Contacts data={contacts} />
+                    </>
+                ) : (
+                    <Loading />
+                )}
+            </SimpleBar>
+        </>
     );
 }
 
