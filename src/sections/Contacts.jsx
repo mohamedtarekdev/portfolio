@@ -4,11 +4,8 @@ import { Col, Container, Row } from 'react-bootstrap';
 
 import '../styles/contacts.css';
 
-import data from '../data/contacts.json';
-
-const Contacts = () => {
+const Contacts = ({ data }) => {
     const fields = ['location', 'email', 'phone'];
-
     return (
         <div id="contacts" className="contacts">
             <Container>

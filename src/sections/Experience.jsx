@@ -4,9 +4,7 @@ import Title from '../components/Title';
 
 import '../styles/experience.css';
 
-import data from '../data/experience.json';
-
-const Experience = () => {
+const Experience = ({ data }) => {
     return (
         <div id="experience" className="experience">
             <Container>

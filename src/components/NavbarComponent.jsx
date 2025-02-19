@@ -7,9 +7,7 @@ import DownloadIcon from '../assets/images/icons/download.svg';
 
 import '../styles/navbar.css';
 
-import data from '../data/contacts.json';
-
-function NavbarComponent() {
+function NavbarComponent({ data }) {
     return (
         <Navbar expand="lg" className="bg-body-tertiary navbar">
             <Container>
