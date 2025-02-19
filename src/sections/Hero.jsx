@@ -4,10 +4,10 @@ import '../styles/hero.css';
 
 import NavbarComponent from '../components/NavbarComponent';
 
-const Hero = () => {
+const Hero = ({ data }) => {
     return (
         <div className="hero">
-            <NavbarComponent />
+            <NavbarComponent data={data} />
         </div>
     );
 };

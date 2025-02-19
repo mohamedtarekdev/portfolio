@@ -7,8 +7,6 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import HexagonIcon from '../components/HexagonIcon';
 
-import data from '../data/tech-stack.json';
-
 const getRows = (items, pattern) => {
     let result = [];
     let index = 0;
@@ -25,7 +23,7 @@ const getRows = (items, pattern) => {
     return result;
 };
 
-const TechStack = () => {
+const TechStack = ({ data }) => {
     const rowPattern = [5, 4];
     const rows = getRows(data, rowPattern);
 
