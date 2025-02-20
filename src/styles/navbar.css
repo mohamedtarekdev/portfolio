@@ -4,6 +4,14 @@
     background-color: var(--light-color) !important;
 }
 
+.navbar .logo {
+    width: 150px;
+}
+
+.navbar .logo img {
+    width: 100%;
+}
+
 .navbar .links a {
     margin-right: 50px;
     padding: 0 !important;
