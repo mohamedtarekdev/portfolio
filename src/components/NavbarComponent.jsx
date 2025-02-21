@@ -19,10 +19,50 @@ function NavbarComponent({ data }) {
                 <Navbar.Collapse id="navbarScroll">
                     <div className="d-flex justify-content-between align-items-center w-100">
                         <Nav navbarScroll className="links">
-                            <Nav.Link href="#tech-stack">Teck Stack</Nav.Link>
-                            <Nav.Link href="#experience">Works</Nav.Link>
-                            <Nav.Link href="#projects">Projects</Nav.Link>
-                            <Nav.Link href="#contacts">Contacts</Nav.Link>
+                            <Nav.Link
+                                href="#tech-stack"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    document
+                                        .getElementById('tech-stack')
+                                        .scrollIntoView({ behavior: 'smooth' });
+                                }}
+                            >
+                                Teck Stack
+                            </Nav.Link>
+                            <Nav.Link
+                                href="#experience"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    document
+                                        .getElementById('experience')
+                                        .scrollIntoView({ behavior: 'smooth' });
+                                }}
+                            >
+                                Works
+                            </Nav.Link>
+                            <Nav.Link
+                                href="#projects"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    document
+                                        .getElementById('projects')
+                                        .scrollIntoView({ behavior: 'smooth' });
+                                }}
+                            >
+                                Projects
+                            </Nav.Link>
+                            <Nav.Link
+                                href="#contacts"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    document
+                                        .getElementById('contacts')
+                                        .scrollIntoView({ behavior: 'smooth' });
+                                }}
+                            >
+                                Contacts
+                            </Nav.Link>
                         </Nav>
                         <a
                             className="download-btn btn btn-primary"
