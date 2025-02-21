@@ -1,0 +1,76 @@
+.projects {
+    background-color: var(--dark-color);
+    padding: 50px 0;
+    overflow-x: hidden;
+}
+
+.slider-container .slick-list {
+    overflow: visible !important;
+}
+
+.projects .project-card {
+    width: 380px;
+    height: 320px;
+    color: #fff;
+    margin: 0;
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s ease, z-index 0.3s ease;
+    cursor: pointer;
+}
+
+.projects .project-card:hover {
+    transform: scale(1.1);
+    z-index: 10;
+}
+
+.projects .project-card .tech-icon-container {
+    margin: 0;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    filter: drop-shadow(1px 1px rgba(255, 255, 255, 1));
+    border: 1px solid #fff;
+}
+
+.projects .project-card .tech-icon-container:last-of-type {
+    margin-right: 0;
+}
+
+.projects .project-card .tech-icon-container img {
+    width: 60%;
+    height: 60%;
+}
+
+.projects .project-card .tags .status span {
+    padding: 6px 10px;
+    font-size: 14px;
+    border-radius: 100px;
+    filter: drop-shadow(1px 1px rgba(255, 255, 255, 1));
+    border: 1px solid #fff;
+}
+
+.projects .project-card .temp-btn {
+    border: none;
+    border-radius: 100px;
+    color: #fff !important;
+    font-weight: 600;
+    font-size: 14px;
+    background-color: #1f2328;
+    padding: 10px 12px;
+}
+
+.projects .project-card .temp-btn img {
+    width: 24px;
+    margin-right: 10px;
+}
+
+.projects .project-card .demo-btn {
+    padding: 12px 15px;
+}
+
+.projects .project-card .demo-btn img {
+    width: 14px;
+    margin-right: 0;
+}
