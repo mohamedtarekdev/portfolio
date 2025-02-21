@@ -18,7 +18,7 @@ const Projects = ({ data }) => {
         speed: 500,
     };
     return (
-        <div className="projects">
+        <div id="projects" className="projects">
             <Row className="justify-content-center">
                 <Col md={12}>
                     <Title title="Projects" color="#F4F5F7" />
