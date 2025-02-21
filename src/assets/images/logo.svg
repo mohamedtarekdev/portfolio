@@ -1,0 +1,14 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 263 44" width="263" height="44">
+	<title>New Project</title>
+	<style>
+		tspan { white-space:pre } 
+		.t0 { font-size: 50px;fill: #9096a1;font-weight: 400;font-family: "Consolas", "Consolas" } 
+		.t1 { font-size: 50px;fill: #2c2f3f;font-weight: 400;font-family: "Consolas", "Consolas" } 
+		.t2 { font-size: 50px;fill: #f4f5f7;font-weight: 400;font-family: "Consolas", "Consolas" } 
+		.t3 { font-size: 50px;fill: #00a8e8;font-weight: 400;font-family: "Consolas", "Consolas" } 
+	</style>
+	<text id="&lt;Tarek /&gt;;" style="transform: matrix(1,0,0,1,-3,35)" >
+		<tspan x="0" y="0" class="t0">&lt;</tspan><tspan  y="0" class="t1">Tarek</tspan><tspan  y="0" class="t2"> </tspan><tspan  y="0" class="t0">/&gt;</tspan><tspan  y="0" class="t3">;
+</tspan>
+	</text>
+</svg>

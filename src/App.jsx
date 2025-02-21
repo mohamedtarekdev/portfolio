@@ -6,39 +6,56 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 
 import 'simplebar-react/dist/simplebar.min.css';
 
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 import Hero from './sections/Hero';
 import TechStack from './sections/TechStack';
 import Experience from './sections/Experience';
 import Contacts from './sections/Contacts';
 import { supabase } from './config/supabaseClient';
 import Loading from './components/Loading';
+import Projects from './sections/Projects';
 
 function App() {
     const [techs, setTechs] = useState([]);
     const [experiences, setExperiences] = useState([]);
+    const [projects, setProjects] = useState([]);
     const [contacts, setContacts] = useState([]);
 
     const [loading, setLoading] = useState(true);
 
     const fetchData = async () => {
-        const [techs, experiences, contacts] = await Promise.all([
+        const [techs, experiences, projects, contacts] = await Promise.all([
             supabase
-                .from('tech_stack')
+                .from('technologies')
                 .select('*')
-                .order('id', { ascending: true }),
+                .order('tech_order', { ascending: true }),
             supabase
-                .from('experience_info')
+                .from('experiences')
                 .select('*')
-                .order('id', { ascending: true }),
+                .order('order', { ascending: true }),
+            supabase
+                .from('projects')
+                .select(
+                    `
+                        *,
+                        project_technologies (
+                            technologies (*)
+                        )
+                    `
+                )
+                .order('order', { ascending: false }),
             supabase
                 .from('contacts')
                 .select('*')
-                .order('id', { ascending: true }),
+                .order('order', { ascending: true }),
         ]);
 
         setTimeout(() => {
             setTechs(techs.data);
             setExperiences(experiences.data);
+            setProjects(projects.data);
             setContacts(contacts.data);
             setLoading(false);
             setLoading(false);
@@ -50,18 +67,21 @@ function App() {
     }, []);
 
     return (
-        <SimpleBar style={{ height: '100vh', color: '#00a8e8' }}>
-            {!loading ? (
-                <>
-                    <Hero data={contacts} />
-                    <TechStack data={techs} />
-                    <Experience data={experiences} />
-                    <Contacts data={contacts} />
-                </>
-            ) : (
-                <Loading />
-            )}
-        </SimpleBar>
+        <>
+            <SimpleBar style={{ height: '100vh', color: '#00a8e8' }}>
+                {!loading ? (
+                    <>
+                        <Hero data={contacts} />
+                        <TechStack data={techs} />
+                        <Experience data={experiences} />
+                        <Projects data={projects} />
+                        <Contacts data={contacts} />
+                    </>
+                ) : (
+                    <Loading />
+                )}
+            </SimpleBar>
+        </>
     );
 }
 

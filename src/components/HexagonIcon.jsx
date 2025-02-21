@@ -1,7 +1,5 @@
 import React from 'react';
 
-import '../styles/hexagon-icon.css';
-
 const HexagonIcon = ({ item }) => {
     return (
         <div className="hexagon-icon-container">
