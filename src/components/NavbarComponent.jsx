@@ -67,6 +67,7 @@ function NavbarComponent({ data }) {
                         <a
                             className="download-btn btn btn-primary"
                             href={data[0].link}
+                            target="_blank"
                             download={`${data[0].value}.pdf`}
                         >
                             <span>Download CV</span>
