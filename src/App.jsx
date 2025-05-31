@@ -17,6 +17,7 @@ import { supabase } from './config/supabaseClient';
 import Loading from './components/Loading';
 import Projects from './sections/Projects';
 import NavbarComponent from './components/NavbarComponent';
+import Footer from './sections/Footer';
 
 function App() {
     const [techs, setTechs] = useState([]);
@@ -78,6 +79,7 @@ function App() {
                         <Experience data={experiences} />
                         <Projects data={projects} />
                         <Contacts data={contacts} />
+                        <Footer />
                     </>
                 ) : (
                     <Loading />
