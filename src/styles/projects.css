@@ -72,3 +72,22 @@
     width: 14px;
     margin-right: 0;
 }
+
+/* ----------------- */
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: #00a8e8;
+}
+
+.swiper-pagination-bullet {
+    background: #9096a1;
+}
+
+.swiper-pagination-bullet-active {
+    background: #00a8e8;
+}
+
+.swiper {
+    overflow: visible !important;
+}
