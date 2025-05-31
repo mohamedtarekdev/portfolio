@@ -1,22 +1,16 @@
-import React, { Component } from 'react';
-import Slider from 'react-slick';
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { A11y } from 'swiper/modules';
+
+import 'swiper/css';
 
 import { Col, Row } from 'react-bootstrap';
 import Title from '../components/Title';
-
 import BackgroundCard from '../components/BackgroundCard';
 
 import '../styles/projects.css';
 
 const Projects = ({ data }) => {
-    const settings = {
-        className: 'center',
-        centerMode: true,
-        infinite: true,
-        centerPadding: '0px',
-        slidesToShow: 3,
-        speed: 500,
-    };
     return (
         <div id="projects" className="projects">
             <Row className="justify-content-center">
@@ -25,11 +19,23 @@ const Projects = ({ data }) => {
                 </Col>
             </Row>
             <div className="slider-container">
-                <Slider {...settings}>
+                <Swiper
+                    modules={[A11y]}
+                    spaceBetween={30}
+                    slidesPerView={3}
+                    loop={true}
+                    breakpoints={{
+                        0: { slidesPerView: 1 },
+                        768: { slidesPerView: 2 },
+                        992: { slidesPerView: 3 },
+                    }}
+                >
                     {data.map((item) => (
-                        <BackgroundCard key={item.id} item={item} />
+                        <SwiperSlide key={item.id}>
+                            <BackgroundCard item={item} />
+                        </SwiperSlide>
                     ))}
-                </Slider>
+                </Swiper>
             </div>
         </div>
     );

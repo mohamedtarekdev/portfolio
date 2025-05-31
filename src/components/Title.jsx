@@ -6,7 +6,7 @@ const Title = ({ title, color }) => {
         <>
             <div className="title">
                 <h3 style={{ color: color }}>{title}</h3>
-                <span className="underline"></span>
+                {/* <span className="underline"></span> */}
             </div>
         </>
     );
