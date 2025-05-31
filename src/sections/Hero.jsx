@@ -14,7 +14,7 @@ const Hero = ({ data }) => {
                     <Col md={6} className="d-flex align-items-center">
                         <div className="hero-content">
                             <h1>Hi, I'm Mohamed Tarek 👋</h1>
-                            <h2>Full-Stack Developer</h2>
+                            <h2>Fullstack Developer</h2>
                             <p>
                                 I build clean and scalable web applications
                                 using modern technologies like React and
