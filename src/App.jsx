@@ -16,6 +16,7 @@ import Contacts from './sections/Contacts';
 import { supabase } from './config/supabaseClient';
 import Loading from './components/Loading';
 import Projects from './sections/Projects';
+import NavbarComponent from './components/NavbarComponent';
 
 function App() {
     const [techs, setTechs] = useState([]);
@@ -71,6 +72,7 @@ function App() {
             <SimpleBar style={{ height: '100vh', color: '#00a8e8' }}>
                 {!loading ? (
                     <>
+                        {/* <NavbarComponent data={contacts} /> */}
                         <Hero data={contacts} />
                         <TechStack data={techs} />
                         <Experience data={experiences} />
