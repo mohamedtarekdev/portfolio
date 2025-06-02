@@ -73,7 +73,7 @@ function App() {
             <SimpleBar style={{ height: '100vh', color: '#00a8e8' }}>
                 {!loading ? (
                     <>
-                        {/* <NavbarComponent data={contacts} /> */}
+                        <NavbarComponent data={contacts} />
                         <Hero data={contacts} />
                         <TechStack data={techs} />
                         <Experience data={experiences} />

@@ -6,6 +6,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     padding: 0;
+    overflow: hidden;
 }
 
 .hero-content {
@@ -47,17 +48,19 @@
 
 .view-projects-btn:hover {
     background-color: #007ebf;
+    color: white;
 }
 
-.download-cv-btn {
+.download-cv-btn:hover {
     background-color: transparent;
     color: #2c2f3f;
     border: 2px solid #2c2f3f;
 }
 
-.download-cv-btn:hover {
+.download-cv-btn {
     background-color: #2c2f3f;
     color: white;
+    border: 2px solid transparent;
 }
 
 .personal-image {

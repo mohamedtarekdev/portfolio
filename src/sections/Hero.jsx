@@ -7,7 +7,10 @@ import personalImage from '../assets/images/personal-image.png';
 const Hero = ({ data }) => {
     console.log('data', data);
     return (
-        <div className="hero d-flex align-items-center">
+        <div
+            className="hero d-flex align-items-center"
+            style={{ paddingTop: '120px' }}
+        >
             <Container>
                 <Row className="d-flex" style={{ height: '100vh' }}>
                     {/* Text Section */}

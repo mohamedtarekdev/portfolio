@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -9,8 +10,37 @@ import Logo from '../assets/images/logo.svg';
 import '../styles/navbar.css';
 
 function NavbarComponent({ data }) {
+    const [activeSection, setActiveSection] = useState('');
+
+    useEffect(() => {
+        const sections = document.querySelectorAll('section[id]');
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setActiveSection(entry.target.id);
+                    }
+                });
+            },
+            { threshold: 0.6 } // ممكن تزود/تنقص النسبة حسب طول السكشن
+        );
+
+        sections.forEach((section) => observer.observe(section));
+        return () => {
+            sections.forEach((section) => observer.unobserve(section));
+        };
+    }, []);
+
+    const scrollToSection = (e, id) => {
+        e.preventDefault();
+        const el = document.getElementById(id);
+        if (el) {
+            el.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
-        <Navbar expand="lg" className="bg-body-tertiary navbar">
+        <Navbar expand="lg" className="bg-body-tertiary navbar fixed-top">
             <Container>
                 <Navbar.Brand className="logo" href="/">
                     <img src={Logo} alt="Logo" />
@@ -21,45 +51,45 @@ function NavbarComponent({ data }) {
                         <Nav navbarScroll className="links">
                             <Nav.Link
                                 href="#tech-stack"
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    document
-                                        .getElementById('tech-stack')
-                                        .scrollIntoView({ behavior: 'smooth' });
-                                }}
+                                className={
+                                    activeSection === 'tech-stack'
+                                        ? 'active'
+                                        : ''
+                                }
+                                onClick={(e) =>
+                                    scrollToSection(e, 'tech-stack')
+                                }
                             >
-                                Teck Stack
+                                Tech Stack
                             </Nav.Link>
                             <Nav.Link
                                 href="#experience"
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    document
-                                        .getElementById('experience')
-                                        .scrollIntoView({ behavior: 'smooth' });
-                                }}
+                                className={
+                                    activeSection === 'experience'
+                                        ? 'active'
+                                        : ''
+                                }
+                                onClick={(e) =>
+                                    scrollToSection(e, 'experience')
+                                }
                             >
                                 Works
                             </Nav.Link>
                             <Nav.Link
                                 href="#projects"
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    document
-                                        .getElementById('projects')
-                                        .scrollIntoView({ behavior: 'smooth' });
-                                }}
+                                className={
+                                    activeSection === 'projects' ? 'active' : ''
+                                }
+                                onClick={(e) => scrollToSection(e, 'projects')}
                             >
                                 Projects
                             </Nav.Link>
                             <Nav.Link
                                 href="#contacts"
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    document
-                                        .getElementById('contacts')
-                                        .scrollIntoView({ behavior: 'smooth' });
-                                }}
+                                className={
+                                    activeSection === 'contacts' ? 'active' : ''
+                                }
+                                onClick={(e) => scrollToSection(e, 'contacts')}
                             >
                                 Contacts
                             </Nav.Link>

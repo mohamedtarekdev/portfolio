@@ -80,3 +80,10 @@ button:focus-visible {
 .simplebar-scrollbar::before {
     background-color: var(--primary-color); /* اللون اللي عايزه */
 }
+
+#tech-stack,
+#experience,
+#projects,
+#contacts {
+    scroll-margin-top: 96px;
+}

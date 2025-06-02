@@ -1,11 +1,22 @@
 .navbar {
-    color: var(--dark-color);
-    padding: 26px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
     background-color: var(--light-color) !important;
+    padding: 26px 0;
+    color: var(--dark-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.navbar .links .active {
+    color: var(--accent-color);
 }
 
 .navbar .logo {
     width: 150px;
+    margin-right: 50px;
 }
 
 .navbar .logo img {
@@ -16,6 +27,11 @@
     margin-right: 50px;
     padding: 0 !important;
     color: inherit;
+    font-weight: 500;
+}
+
+.navbar .links a:hover {
+    color: var(--accent-color);
 }
 
 .download-btn {
@@ -23,6 +39,11 @@
     border: none;
     border-radius: 100px;
     padding: 10px 30px !important;
+}
+
+.download-btn:hover {
+    background-color: #007ebf;
+    color: white;
 }
 
 .download-btn span {
