@@ -7,14 +7,17 @@ import personalImage from '../assets/images/personal-image.png';
 const Hero = ({ data }) => {
     console.log('data', data);
     return (
-        <div className="hero d-flex align-items-center">
+        <div
+            className="hero d-flex align-items-center"
+            style={{ paddingTop: '120px' }}
+        >
             <Container>
                 <Row className="d-flex" style={{ height: '100vh' }}>
                     {/* Text Section */}
                     <Col md={6} className="d-flex align-items-center">
                         <div className="hero-content">
                             <h1>Hi, I'm Mohamed Tarek 👋</h1>
-                            <h2>Full-Stack Developer</h2>
+                            <h2>Fullstack Developer</h2>
                             <p>
                                 I build clean and scalable web applications
                                 using modern technologies like React and
