@@ -1,11 +1,11 @@
 import { Col, Container, Row } from 'react-bootstrap';
+import React from 'react';
 
 import '../styles/hero.css';
 
-import personalImage from '../assets/images/personal-image.png';
+import personalImage from '../assets/images/personal-image.webp';
 
 const Hero = ({ data }) => {
-    console.log('data', data);
     return (
         <div
             className="hero d-flex align-items-center"

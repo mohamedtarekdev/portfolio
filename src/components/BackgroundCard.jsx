@@ -1,4 +1,5 @@
 import Card from 'react-bootstrap/Card';
+import React from 'react';
 
 import GithubIcon from '../assets/images/icons/github-circle.svg';
 import LinkIcon from '../assets/images/icons/link.svg';
