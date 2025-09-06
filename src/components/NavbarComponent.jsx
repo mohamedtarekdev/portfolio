@@ -5,7 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
 import DownloadIcon from '../assets/images/icons/download.svg';
-import Logo from '../assets/images/logo.svg';
+import Logo from '../assets/images/logo.png';
 
 import '../styles/navbar.css';
 
